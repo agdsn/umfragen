@@ -1,0 +1,71 @@
+\documentclass[a4paper,10pt]{scrreprt}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{paperandpencil}
+\usepackage[T1]{fontenc}
+\usepackage{subfigure}
+\usepackage{graphicx} % Graphiken einbinden
+\usepackage{fancyhdr}
+\usepackage{tgpagella}
+
+% customized paperandpencil styles
+\renewcommand{\vertikalblocktwo}[3]{\vspace{0.1cm}\begin{tabular}{p{10cm}p{2cm}p{2cm}p{0.001cm}}&\centering #1&\centering #2&\\#3\end{tabular}\vspace{0.5cm}}
+\renewcommand{\blocktexttwo}[1]{#1\vspace{0.2cm}& \centering$\Box$ & \centering$\Box$&\\}
+\renewcommand{\hybridline}[2]{\begin{displaymath}\begin{array}{p{7.5cm}}\df{#1}\end{array}\linetext{#2}\end{displaymath}}
+\renewcommand{\longline}{\raisebox{-3mm}{\parbox{8cm}{\hrule\strut}}}
+\renewenvironment{answersA}{\vspace{0.25cm}\begin{addmargin}[0cm]{4cm}\begin{compactitem}[]}{\end{compactitem}\end{addmargin}}
+% end customized paperandpencil styles
+
+\title{Mitgliederumfrage AG DSN}
+\author{AG Dresdner Studentennetz}
+\date{17. September 2014}
+
+\begin{document}
+
+    \thispagestyle{fancy}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+    \setlength\headheight{80.0pt}
+    \addtolength{\textheight}{-80.0pt}
+    \rhead{\includegraphics[width=6cm]{agdsn_logo.pdf}}
+
+    \question{\bf Zu welcher AG DSN Sektion sind Sie derzeit zugehörig?}
+    \begin{answersA}
+        \item\pbox{Borsbergstraße}
+        \item\pbox{Gerokstraße}
+        \item\pbox{Hochschulstraße}
+        \item\pbox{Wundtstraße}
+        \item\pbox{Zeunerstraße}\vspace{.25cm}
+        \item\pbox{Keine davon}
+    \end{answersA}
+
+    \question{\bf Weitere optionale Angaben}
+    \begin{tabular}{ p{6cm} l }
+        Bisherige Wohndauer im Wohnheim & \longline \\
+        Studiengang & \longline \\
+        Verwendetes Betriebssystem & \longline \\
+        Bisherige Wohndauer im Wohnheim & \longline
+    \end{tabular}
+
+    \question{\bf Wenn Sie Mitglied in der AG DSN sind,}
+    \vertikalblocktwo{Ja}{Nein}{
+        \blocktexttwo{sind Sie mit der Betreuung und Beratung bei Problemen durch die aktiven Mitglieder zufrieden?}
+        \blocktexttwo{sind Sie mit der Erreichbarkeit der einzelnen aktiven Mitgliedern, wenn Sie bedenken, dass diese auch nur Studenten sind, zufrieden?}
+        \blocktexttwo{wussten Sie, dass Sie, nachdem Sie den Internetantrag ausgefüllt haben, ein passives Mitglied der AG DSN sind?}
+        \blocktexttwo{sind Sie mit der Anbindung zufrieden?}
+        \blocktexttwo{reicht Ihnen das Trafficvolumen von 2 GB am Tag?}
+        \blocktexttwo{ist das Preis-/Leistungsverhältnis zufriedenstellend?}
+    }
+
+    \question{\bf Sollten Sie kein Mitglied in der AG DSN sein,}
+    \vertikalblocktwo{Ja}{Nein}{
+        \blocktexttwo{nutzen Sie im Wohnheim einen externen Internetanbieter?}
+        \blocktexttwo{sind Sie kein Wohnheimbewohner (mehr)?}
+    }
+
+    \question{\bf Weitere Anmerkungen}
+    \opentwo
+
+\end{document}          
