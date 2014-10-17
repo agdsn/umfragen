@@ -16,7 +16,7 @@
 
 
 % customized paperandpencil styles
-\renewcommand{\vertikalblocktwo}[3]{\vspace{0.1cm}\begin{tabular}{p{10cm}p{2cm}p{2cm}p{0.001cm}}&\centering #1&\centering #2&\\#3\end{tabular}\vspace{0.5cm}}
+\renewcommand{\vertikalblocktwo}[3]{\vspace{0.1cm}\begin{tabular}{p{10cm}p{1cm}p{1cm}p{2.001cm}}&\centering #1&\centering #2&\\#3\end{tabular}\vspace{0.5cm}}
 \renewcommand{\blocktexttwo}[1]{#1\vspace{0.2cm}& \centering$\Box$ & \centering$\Box$&\\}
 \renewcommand{\vertikalblockfour}[5]{\vspace{0.1cm}\begin{tabular}{p{10cm}p{1cm}p{1cm}p{1cm}p{1cm}p{0.001cm}}&\centering #1&\centering #2&\centering #3&\centering #4&\\#5\end{tabular}\vspace{0.5cm}}
 \renewcommand{\blocktextfour}[1]{#1\vspace{0.2cm}& \centering$\Box$ & \centering$\Box$ & \centering$\Box$ & \centering$\Box$&\\}
@@ -62,19 +62,22 @@
 
     \question{\bf \multilang{Wenn Du Mitglied in der AG DSN bist,}{If you are a
     member of AG DSN,}}
-    \vertikalblockfour{\multilang{Ja}{Yes}}{\multilang{Naja}{Well}}{\multilang{Nein}{No}}{\multilang{k.A.}{None}}{
+    \vertikalblocktwo{\multilang{Ja}{Yes}}{\multilang{Nein}{No}}{
+        \blocktexttwo{\multilang{wusstest du, dass alle AG DSN-Admins
+        ehrenamtlich arbeiten?}{did you know that all admins work unsalaried?}}
+        \blocktexttwo{\multilang{wusstest du, dass du nach Ausfüllen des
+        Mitgliedschafts-/Internetantrags ein passives Mitglied der AG DSN
+        wirst?}{did you know that by filling out the internet application you
+        become a passive member of AG DSN?}}
+    }
+
+    \vertikalblockfour{\multilang{Ja}{Yes}}{\multilang{Naja}{Slightly}}{\multilang{Nein}{No}}{\multilang{k.A.}{n/s}}{
         \blocktextfour{\multilang{hältst du die Höhe des Semesterbeitrags für
         angemessen?}{do you think the semester fee is fair?}}
-        \blocktextfour{\multilang{wusstest du, dass alle AG DSN-Admins
-        ehrenamtlich arbeiten?}{did you know that all admins work unsalaried?}}
         \blocktextfour{\multilang{bist du mit der Betreuung und Beratung bei Problemen
         durch die Admins zufrieden?}{are you satisfied with the support by the admins?}}
         \blocktextfour{\multilang{bist du mit der Erreichbarkeit der Admins
         zufrieden?}{are you satisfied with the availability of the admins?}}
-        \blocktextfour{\multilang{wusstest du, dass du nach Ausfüllen des
-        Mitgliedschafts-/Internetantrags ein passives Mitglied der AG DSN
-    wirst?}{did you know that by filling out the internet application you
-    become a passive member of AG DSN?}}
         \blocktextfour{\multilang{bist du mit der Anbindung zufrieden?}{are you
         satisfied with the connection in general?}}
         \blocktextfour{\multilang{reicht dir das Trafficvolumen von 3 GB am
