@@ -13,6 +13,8 @@
 % customized paperandpencil styles
 \renewcommand{\vertikalblocktwo}[3]{\vspace{0.1cm}\begin{tabular}{p{10cm}p{2cm}p{2cm}p{0.001cm}}&\centering #1&\centering #2&\\#3\end{tabular}\vspace{0.5cm}}
 \renewcommand{\blocktexttwo}[1]{#1\vspace{0.2cm}& \centering$\Box$ & \centering$\Box$&\\}
+\renewcommand{\vertikalblockfour}[5]{\vspace{0.1cm}\begin{tabular}{p{10cm}p{1cm}p{1cm}p{1cm}p{1cm}p{0.001cm}}&\centering #1&\centering #2&\centering #3&\centering #4&\\#5\end{tabular}\vspace{0.5cm}}
+\renewcommand{\blocktextfour}[1]{#1\vspace{0.2cm}& \centering$\Box$ & \centering$\Box$ & \centering$\Box$ & \centering$\Box$&\\}
 \renewcommand{\hybridline}[2]{\begin{displaymath}\begin{array}{p{7.5cm}}\df{#1}\end{array}\linetext{#2}\end{displaymath}}
 \renewcommand{\longline}{\raisebox{-3mm}{\parbox{8cm}{\hrule\strut}}}
 \renewenvironment{answersA}{\vspace{0.25cm}\begin{addmargin}[0cm]{4cm}\begin{compactitem}[]}{\end{compactitem}\end{addmargin}}
@@ -29,15 +31,11 @@
     \renewcommand{\footrulewidth}{0pt}
     \setlength\headheight{40.0pt}
     \addtolength{\textheight}{-70.0pt}
-  %  \setlength\footheight{30.0pt}
     \rhead{\includegraphics[width=6cm]{agdsn_logo.pdf}}
     \cfoot{}
-    \rfoot{\tiny 20141016-dpa}
+    \rfoot{\tiny 20141017-dpa}
 
     {\huge Mitgliederumfrage}
-%    Da sich in der AG DSN zur Zeit viele Dinge verändern und wir euch dabei
-%    natürlich mitnehmen möchten, habt ihr folgend die Möglichkeit uns
-%    allgemein Rückmeldung zu geben.
 
     \question{\bf Zu welcher AG DSN Sektion bist Du derzeit zugehörig?}
     \begin{answersA}
@@ -58,21 +56,21 @@
     \end{tabular}
 
     \question{\bf Wenn Du Mitglied in der AG DSN bist,}
-    \vertikalblocktwo{Ja}{Nein}{
-        \blocktexttwo{bist du mit der Betreuung und Beratung bei Problemen durch die aktiven Mitglieder zufrieden?}
-        \blocktexttwo{bist du mit der Erreichbarkeit der aktiven Mitglieder zufrieden?}
-        \blocktexttwo{wusstest du, dass du nach Ausfüllen des
+    \vertikalblockfour{Ja}{Naja}{Nein}{k.A.}{
+        \blocktextfour{hältst du die Höhe des Semesterbeitrags für angemessen?}
+        \blocktextfour{wusstest du, dass alle AG DSN-Admins ehrenamtlich arbeiten?}
+        \blocktextfour{bist du mit der Betreuung und Beratung bei Problemen
+        durch die Admins zufrieden?}
+        \blocktextfour{bist du mit der Erreichbarkeit der Admins zufrieden?}
+        \blocktextfour{wusstest du, dass du nach Ausfüllen des
         Mitgliedschafts-/Internetantrags ein passives Mitglied der AG DSN wirst?}
-        \blocktexttwo{bist du mit der Anbindung zufrieden?}
-        \blocktexttwo{reicht dir das Trafficvolumen von 3 GB am Tag?}
-        \blocktexttwo{bevorzugst du das Ansparmodell vor der rollenden Woche?}
-        \blocktexttwo{ist das Preis-/Leistungsverhältnis zufriedenstellend?}
+        \blocktextfour{bist du mit der Anbindung zufrieden?}
+        \blocktextfour{reicht dir das Trafficvolumen von 3 GB am Tag?}
     }
 
     \question{\bf Solltest du kein Mitglied in der AG DSN sein,}
     \vertikalblocktwo{Ja}{Nein}{
         \blocktexttwo{nutzt du im Wohnheim einen externen Internetanbieter?}
-        \blocktexttwo{bist du kein Wohnheimbewohner (mehr)?}
     }
 
     \question{\bf Weitere Anmerkungen}
