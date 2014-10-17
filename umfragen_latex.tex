@@ -1,7 +1,11 @@
 \documentclass[a4paper,10pt]{scrreprt}
 
+% Choose the document language here. 
+% Use either #1 for german babel and texts or #2 for english.
+\newcommand{\multilang}[2]{#2}
+
 \usepackage[utf8x]{inputenc}
-\usepackage[ngerman]{babel}
+\usepackage[\multilang{ngerman}{english}]{babel}
 \usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
 \usepackage{paperandpencil}
 \usepackage[T1]{fontenc}
@@ -9,6 +13,7 @@
 \usepackage{graphicx} % Graphiken einbinden
 \usepackage{fancyhdr}
 \usepackage{tgpagella}
+
 
 % customized paperandpencil styles
 \renewcommand{\vertikalblocktwo}[3]{\vspace{0.1cm}\begin{tabular}{p{10cm}p{2cm}p{2cm}p{0.001cm}}&\centering #1&\centering #2&\\#3\end{tabular}\vspace{0.5cm}}
@@ -22,7 +27,6 @@
 
 \title{Mitgliederumfrage AG DSN}
 \author{AG Dresdner Studentennetz}
-\date{16. Oktober 2014}
 
 \begin{document}
 
@@ -35,45 +39,57 @@
     \cfoot{}
     \rfoot{\tiny 20141017-dpa}
 
-    {\huge Mitgliederumfrage}
+    {\huge \multilang{Mitgliederumfrage}{Member survey}}
 
-    \question{\bf Zu welcher AG DSN Sektion bist Du derzeit zugehörig?}
+    \question{\bf \multilang{Zu welcher AG DSN Sektion bist Du derzeit
+    zugehörig?}{What division of AG DSN do you currently belong to?}}
     \begin{answersA}
         \item\pbox{Borsbergstraße}
         \item\pbox{Gerokstraße}
         \item\pbox{Hochschulstraße}
         \item\pbox{Wundtstraße}
         \item\pbox{Zeunerstraße}\vspace{.25cm}
-        \item\pbox{Keine davon}
+        \item\pbox{\multilang{Keine davon}{None of the above}}
     \end{answersA}
 
-    \question{\bf Optionale Angaben}
+    \question{\bf \multilang{Optionale Angaben}{Optional information}}
     \begin{tabular}{ p{6cm} l }
-        Heutiges Datum & \longline \\
-        Bisherige Wohndauer im Wohnheim & \longline \\
-        Studiengang & \longline \\
-        Verwendetes Betriebssystem & \longline
+        \multilang{Heutiges Datum}{Todays date} & \longline \\
+        \multilang{Bisherige Wohndauer im Wohnheim}{Length of occupancy} & \longline \\
+        \multilang{Studiengang}{Study course} & \longline \\
+        \multilang{Verwendetes Betriebssystem}{Used operating system} & \longline
     \end{tabular}
 
-    \question{\bf Wenn Du Mitglied in der AG DSN bist,}
-    \vertikalblockfour{Ja}{Naja}{Nein}{k.A.}{
-        \blocktextfour{hältst du die Höhe des Semesterbeitrags für angemessen?}
-        \blocktextfour{wusstest du, dass alle AG DSN-Admins ehrenamtlich arbeiten?}
-        \blocktextfour{bist du mit der Betreuung und Beratung bei Problemen
-        durch die Admins zufrieden?}
-        \blocktextfour{bist du mit der Erreichbarkeit der Admins zufrieden?}
-        \blocktextfour{wusstest du, dass du nach Ausfüllen des
-        Mitgliedschafts-/Internetantrags ein passives Mitglied der AG DSN wirst?}
-        \blocktextfour{bist du mit der Anbindung zufrieden?}
-        \blocktextfour{reicht dir das Trafficvolumen von 3 GB am Tag?}
+    \question{\bf \multilang{Wenn Du Mitglied in der AG DSN bist,}{If you are a
+    member of AG DSN,}}
+    \vertikalblockfour{\multilang{Ja}{Yes}}{\multilang{Naja}{Well}}{\multilang{Nein}{No}}{\multilang{k.A.}{None}}{
+        \blocktextfour{\multilang{hältst du die Höhe des Semesterbeitrags für
+        angemessen?}{do you think the semester fee is fair?}}
+        \blocktextfour{\multilang{wusstest du, dass alle AG DSN-Admins
+        ehrenamtlich arbeiten?}{did you know that all admins work unsalaried?}}
+        \blocktextfour{\multilang{bist du mit der Betreuung und Beratung bei Problemen
+        durch die Admins zufrieden?}{are you satisfied with the support by the admins?}}
+        \blocktextfour{\multilang{bist du mit der Erreichbarkeit der Admins
+        zufrieden?}{are you satisfied with the availability of the admins?}}
+        \blocktextfour{\multilang{wusstest du, dass du nach Ausfüllen des
+        Mitgliedschafts-/Internetantrags ein passives Mitglied der AG DSN
+    wirst?}{did you know that by filling out the internet application you
+    become a passive member of AG DSN?}}
+        \blocktextfour{\multilang{bist du mit der Anbindung zufrieden?}{are you
+        satisfied with the connection in general?}}
+        \blocktextfour{\multilang{reicht dir das Trafficvolumen von 3 GB am
+        Tag?}{are 3 GB of traffic enough for your daily use?}}
     }
 
-    \question{\bf Solltest du kein Mitglied in der AG DSN sein,}
-    \vertikalblocktwo{Ja}{Nein}{
-        \blocktexttwo{nutzt du im Wohnheim einen externen Internetanbieter?}
+    \question{\bf \multilang{Solltest du kein Mitglied in der AG DSN
+    sein,}{If you are not a member of AG DSN,}}
+    \vertikalblocktwo{\multilang{Ja}{Yes}}{\multilang{Nein}{No}}{
+        \blocktexttwo{\multilang{nutzt du im Wohnheim einen externen
+        Internetanbieter?}{are you connected with an external internet
+        provider?}}
     }
 
-    \question{\bf Weitere Anmerkungen}
+    \question{\bf \multilang{Weitere Anmerkungen}{Additional notes}}
     \opentwo
 
 \end{document}          
