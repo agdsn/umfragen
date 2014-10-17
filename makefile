@@ -1,10 +1,10 @@
 .PHONY: de en clean
 
 de : 
-	pdflatex umfragen.tex
+	pdflatex -jobname=umfrage_de umfragen.tex
 
 en :
-	pdflatex "\newcommand{\multilang}[2]{#2}\input{umfragen}"
+	pdflatex -jobname=umfrage_en "\newcommand{\multilang}[2]{#2}\input{umfragen}"
 
 clean :
-	rm -v umfragen.aux umfragen.log
+	rm -v *.aux *.log
